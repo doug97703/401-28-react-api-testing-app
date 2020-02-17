@@ -10,5 +10,7 @@ Dependencies:
     "enzyme-adapter-react-16": "^1.15.2"
 
 To start:
+
 npm install
+
 npm start
