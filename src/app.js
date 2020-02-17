@@ -9,21 +9,21 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0,
-      results: [],
+      results: {},
     };
   }
   
-  handleForm = (count, results) => {
-    this.setState({ count, results });
+  handleForm = (results) => {
+    // results = results.map( obj => JSON.stringify(obj) )
+    this.setState({ results:results });
   };
 
   render() {
     return (
       <div>
-        <h1>PROOF OF LIFE</h1>
-        {/* <Form handler={this.handleForm} />
-        <Results Results={this.state.results} /> */}
+        <h1>RESTy</h1>
+        <Form handler={this.handleForm} />
+        <Results results={this.state.results} />
       </div>
     );
   }

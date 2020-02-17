@@ -4,25 +4,23 @@ class Form extends React.Component {
 
   handleSubmit = async e => {
     e.preventDefault();
-
-    let raw = await fetch('https://swapi.co/api/people/');
+    let route = e.target[0].value
+    let method = e.target[1].value || 'get'
+    let raw = await fetch(route, {
+      method: method,
+    });
     let data = await raw.json();
     console.log(data);
-
-    let count = data.count;
-
-    let computedResults = data.results.reduce((list, person) => {
-      list[person.name] = person.url;
-      return list;
-    }, {});
-
-    this.props.handler(count, computedResults);
+    this.props.handler(data);
   };
 
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <input type="text" placeholder="proof of life"></input>
+        <input name="url" id="url" placeholder="URL" type="text"></input>
+        <input id="method" placeholder="GET/POST/PUT/DELETE" type="text"></input>
+        <br></br>
+        <button onSubmit={this.handleSubmit} type="submit">GO</button>
       </form>
     );
   }

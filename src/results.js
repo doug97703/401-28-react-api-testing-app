@@ -1,21 +1,13 @@
 import React from 'react';
+import JSONPretty from 'react-json-pretty';
 
 const Results = (props) => {
-
+  let result = Object.keys(props.results).length === 0 ? 'no results yet' : props.results
+  console.log(typeof props.results)
+  console.log(props.results)
   return (
-    <div>
-      <ul>
-        {Object.keys(props.results).map((key, idx) => {
-          return (
-            <li key={idx}>
-              <a href={props.results[key]}>{key}</a>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
+    <JSONPretty id="json-pretty" data={result}></JSONPretty>
   )
-
 }
 
 export default Results;
