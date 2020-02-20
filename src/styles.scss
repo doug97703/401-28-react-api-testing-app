@@ -1,5 +1,6 @@
 body, html, #root {
     // text-align: left;
+    font-family: Ubuntu Mono;
     background: #131313;
     color: #cecece;
     width: 100%;
@@ -98,6 +99,7 @@ h1 {
 }
 #history {
     width: 30%;
+    padding: 2%;
     text-align: left;
     li {
     list-style-type: none;
