@@ -67,16 +67,6 @@ class Form extends React.Component {
   render() {
     return (
       <>
-        <div id="header-stuff">
-          <span id="header-toggle" onClick={this.toggleHeader}>Headers</span>
-          <div style={this.state.headerStyle} id="headers">
-            <h3>Basic Auth</h3>
-            <input name="username" id="username" placeholder="username" type="text"></input>
-            <input name="password" id="password" placeholder="password" type="text"></input>
-            <h3>Bearer Token</h3>
-            <input name="bearer" id="bearer" placeholder="bearer" type="text"></input>
-          </div>
-        </div>
         <form id="theform" onSubmit={this.handleSubmit}>
           <input className="text-input" name="url" id="url" placeholder="URL" type="text"></input>
           <br></br>
@@ -90,7 +80,16 @@ class Form extends React.Component {
           <input name="method" className="radio" value="delete" id="delete" type="radio" />
           <input className="text-input" name="raw" id="raw" type="text" placeholder="Raw JSON Body" />
           <br></br>
-          
+          <div id="header-stuff">
+            <span id="header-toggle" onClick={this.toggleHeader}>Headers</span>
+            <div style={this.state.headerStyle} id="headers">
+              <h3>Basic Auth</h3>
+              <input name="username" id="username" placeholder="username" type="text"></input>
+              <input name="password" id="password" placeholder="password" type="text"></input>
+              <h3>Bearer Token</h3>
+              <input name="bearer" id="bearer" placeholder="bearer" type="text"></input>
+            </div>
+          </div>
           <br></br>
           <br></br>
           <div id="submit-button">
