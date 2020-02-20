@@ -31,6 +31,9 @@ class App extends React.Component {
   render() {
     return (
       <>
+        <br></br>
+        <br></br>
+        <br></br>
         <h1>RESTy</h1>
         <div id="app">
           < History history={this.state.history} />
