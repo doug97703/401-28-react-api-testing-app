@@ -9,6 +9,8 @@
 
 Or visit the development deployment located here: https://cryptic-brook-75726.herokuapp.com/
 
+The app supports GET, PUT, POST, and DELETE methods, along with a JSON body input. It can also handle Basic and Bearer authentication (click "Headers" to toggle this menu).
+
 Preview of the app:
 
 <img src="./preview.png" style="width: 600px">
