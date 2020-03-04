@@ -7,6 +7,9 @@
 
 `npm start`
 
+Or visit the development deployment located here: https://cryptic-brook-75726.herokuapp.com/
+
+Preview of the app:
 
 <img src="./preview.png" style="width: 600px">
 
